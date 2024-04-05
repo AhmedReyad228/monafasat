@@ -1,0 +1,288 @@
+<nav class="navbar navbar-expand-lg shadow bg-white">
+  <div class="container">
+    <a class="navbar-brand" href="#"
+      ><img src="./assets/images/logo.jpg" alt=""
+    /></a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" role="button" (click)="onClick('monafasat')"
+            >عن منافسات</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" role="button" (click)="onClick('statistics')"
+            >خدمة الإحصائيات</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" role="button" (click)="onClick('predictions')"
+            >خدمة التنبيهات</a
+          >
+        </li>
+      </ul>
+
+      <div class="search p-3 d-none d-lg-block">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <button class="btn-main ms-3" routerLink="/register">
+            الـتـــســــجــيــل
+          </button>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link p-0" routerLink="/login"
+            ><i class="far fa-user-circle fa-2x"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <section>
+    <div class="container-fluid">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="px-3">
+            <h1 class="text-main">منافسات</h1>
+            <p class="desc">
+              هي منصة تخدم رواد الأعمال و القطاع المؤسسي والتي تهدف لعرض
+              المنافسات ومبالغها ، وتحليل بيانات المنافسات باستخدام الذكاء
+              الاصطناعي، لإعطاء رؤية باسهاب عن مشاريع القطاعات والوزارات والجهات
+              المستفيده.
+            </p>
+            <button
+              class="monafasat-increase btn-main"
+              (click)="onClick('monafasat')"
+            >
+              المزيد عن منافسات
+            </button>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="position-relative">
+            <div class="leftside" dir="ltr">
+              <img src="./assets/images/dashboard3.jpg" alt="dashboard" />
+            </div>
+            <div class="layout">
+              <img
+                src="./assets/images/mobile.gif"
+                class="w-100 h-100"
+                alt="mobile"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+
+<main>
+  <section id="monafasat">
+    <div class="container-fluid">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <div class="bg-white shadow border-1">
+            <div class="text-center">
+              <h2>تسعير</h2>
+              <h3>قم بالتسجيل والاشتراك بالخدمات فوراً</h3>
+              <div class="py-3">
+                <span class="text-main">مجاناً</span>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <div>
+                <div class="d-flex align-items-center mb-2">
+                  <div class="price-image">
+                    <img
+                      src="./assets/images/price3.jpg"
+                      class="w-100"
+                      alt="price"
+                    />
+                  </div>
+                  <h5>خدمة التنبيهات للمنافسات المحددة في منصة اعتماد</h5>
+                </div>
+
+                <div class="d-flex align-items-center mb-2">
+                  <div class="price-image">
+                    <img
+                      src="./assets/images/price2.jpg"
+                      class="w-100"
+                      alt="price"
+                    />
+                  </div>
+                  <h5>خدمة الإحصائيات لجميع المنافسات السابقة في اعتماد</h5>
+                </div>
+
+                <div class="d-flex align-items-center mb-2">
+                  <div class="price-image">
+                    <img
+                      src="./assets/images/price1.jpg"
+                      class="w-100"
+                      alt="price"
+                    />
+                  </div>
+                  <h5>الإطلاع على جميع الخدمات الأخرى</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="subscription bg-main p-1 text-center mt-5">
+              <a routerLink="/register"
+                >تسجيل الدخول والإشتراك<i
+                  class="fa-solid fa-circle-arrow-left me-2"
+                  style="color: #ffffff"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="left-side">
+            <h5>منافسات</h5>
+            <p>
+              هي منصة لخدمة الـقـطـاع المـؤسـسي والــتـي تــهــدف لــعـرض
+              الإحـصـائـيـات وتـحليـل الـبـيـانـات ورؤيـة الـمـنـافـسـات في
+              مـنـصـة إعـتـمـاد
+            </p>
+            <h2>المميزات</h2>
+
+            <div class="row">
+              <div class="col-md-6 left-border">
+                <div>
+                  تحليل منافسات الجهات الحكومية واعطاء بروفايل كامل عن كل جهه
+                  حكومية ومشاريعها.
+                </div>
+
+                <div class="separate"></div>
+
+                <div>
+                  تحليل بيانات المنافسات في الشركات الخاصه واعطاء بروفايل خاص
+                  لكل شركة ومدى نجاحها.
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div>
+                  امكانية البحث وتحليل البيانات عن مجال المنافسات والانشطه.
+                </div>
+                <div class="separate"></div>
+                <div>
+                  امكانية التنبؤ بالقيمة المتوقعه للمنافسات القائمة باستخدام
+                  تقنية الذكاء الاصطناعي
+                </div>
+              </div>
+            </div>
+
+            <h5 class="my-4">
+              قم بالتسجيل والوصول لجميع الخدمات المقدمة والخدمات التي ستطلق
+              قريباً
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="statistics">
+    <div class="statistics-desc">
+      <h2 class="statistics">خدمة الإحصائيات</h2>
+
+      <h5>
+        وهي خدمة تستطـــيع من خلالها الإطـــلاع علــــى جميــــع احصائيات
+        المنافســــات المتعلقــــة بنشـــاط الشركة
+      </h5>
+
+      <button class="btn-main" routerLink="/register">طلب الخدمة</button>
+    </div>
+  </section>
+
+  <section id="predictions">
+    <div class="predictions-desc">
+      <h2 class="predictions">خدمة التنبيهات</h2>
+
+      <h5>
+        وهي خدمة تمكنك من تصنيف النشاطات والجهات الحكومية وتسمح للمستخدم باستلام
+        الرسائل التذكيرية للمنافسات الجديده وغيرها
+      </h5>
+
+      <button class="btn-main" routerLink="/register">طلب الخدمة</button>
+    </div>
+  </section>
+
+  <section id="search">
+    <div class="p-3">
+      <h3 class="text-white">البحث في منصة إعتماد</h3>
+      <div class="position-relative">
+        <input type="search" class="form-control" placeholder="بحــــــث" />
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container mt-5">
+    <div class="row align-items-center g-4 justify-content-center">
+      <div class="col-md-2">
+        <div>
+          <img src="./assets/images/etimad.jpg" class="w-100" alt="" />
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div>
+          <img src="./assets/images/logo.jpg" class="w-100" alt="" />
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <div>
+          <h5>جميع الحقوق محفوظة لمنصة إعتماد</h5>
+          <h5>تدعم خدمة منافسات منصة إعتماد</h5>
+        </div>
+      </div>
+
+      <div class="col-md-2 text-center">
+        <h3>Monafsat @</h3>
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="icon">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div class="icon">
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div>
+          <img src="./assets/images/vision2030.jpg" class="w-100" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

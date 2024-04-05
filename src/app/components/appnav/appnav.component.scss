@@ -1,0 +1,50 @@
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+
+  img{
+    width: 150px;
+  }
+
+
+  .nav-link,h3{
+    font-size: 20px !important;
+    color: #09c;
+  }
+
+  .fa-user-circle{
+    color: #235A86 !important;
+  }
+  ul{
+    button{
+      padding: 5px 30px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+
+  .myNav{
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: #fff;
+    font-size: 20px !important;
+  }
+
+
+  .user-info{
+    text-align: center;
+    img{
+      width: 100px;
+    }
+  }
+
+
+}
+
+

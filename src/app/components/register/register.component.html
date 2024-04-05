@@ -1,0 +1,188 @@
+<section>
+  <div class="text-center mx-auto">
+    <div class="logo-img">
+      <img src="./assets/images/Capture-logo.PNG" alt="" />
+    </div>
+
+    <div class="text-center">
+      <form [formGroup]="registerForm" (ngSubmit)="handleForm()">
+        <h2 class="my-3">التسجيل</h2>
+        <div class="my-inputs p-2 mx-auto w-75">
+          <div class="mb-3">
+            <input
+              #nameInp
+              formControlName="name"
+              type="text"
+              class="form-control"
+              placeholder="الإسم"
+            />
+            <div
+              *ngIf="
+                registerForm.get('name')?.errors &&
+                (registerForm.get('name')?.touched || nameInp.value.length > 0)
+              "
+              class="alert alert-danger w-50 mx-auto text-center small mt-2"
+            >
+              <p
+                *ngIf="registerForm.get('name')?.getError('required')"
+                class="m-0"
+              >
+                هذا الحقل اجباري
+              </p>
+              <p
+                *ngIf="registerForm.get('name')?.getError('minlength')"
+                class="m-0"
+              >
+                أقل عدد من الحورف ثلاثة أحرف
+              </p>
+              <p
+                *ngIf="registerForm.get('name')?.getError('maxlength')"
+                class="m-0"
+              >
+                الحد الأدني من الحروف عشرون حرف
+              </p>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <input
+              #emailInp
+              formControlName="email"
+              type="text"
+              class="form-control"
+              placeholder="عنوان البريد الإلكتروني"
+            />
+            <div
+              *ngIf="
+                registerForm.get('email')?.errors &&
+                (registerForm.get('email')?.touched ||
+                  emailInp.value.length > 0)
+              "
+              class="alert alert-danger w-50 mx-auto text-center small mt-2"
+            >
+              <p
+                *ngIf="registerForm.get('email')?.getError('required')"
+                class="m-0"
+              >
+                هذا الحقل اجباري
+              </p>
+              <p
+                *ngIf="registerForm.get('email')?.getError('email')"
+                class="m-0"
+              >
+                صيغة البريد الإلكتروني غير صحيحة
+              </p>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <input
+              #password
+              formControlName="password"
+              type="password"
+              class="form-control"
+              placeholder="كلمة المرور"
+            />
+            <div
+              *ngIf="
+                registerForm.get('password')?.errors &&
+                (registerForm.get('password')?.touched ||
+                  password.value.length > 0)
+              "
+              class="alert alert-danger w-50 mx-auto text-center small mt-2"
+            >
+              <p
+                *ngIf="registerForm.get('password')?.getError('required')"
+                class="m-0"
+              >
+                هذا الحقل اجباري
+              </p>
+              <p
+                *ngIf="registerForm.get('password')?.getError('pattern')"
+                class="m-0"
+              >
+                يجب الا يقل عن ستة أحرف
+              </p>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <input
+              #rePassword
+              formControlName="rePassword"
+              type="password"
+              class="form-control"
+              placeholder=" أعد كلمة المرور"
+            />
+            <div
+              *ngIf="
+                registerForm.get('rePassword')?.errors &&
+                (registerForm.get('rePassword')?.touched ||
+                  rePassword.value.length > 0)
+              "
+              class="alert alert-danger w-50 mx-auto text-center small mt-2"
+            >
+              <p
+                *ngIf="registerForm.get('rePassword')?.getError('required')"
+                class="m-0"
+              >
+                هذا الحقل اجباري
+              </p>
+              <p
+                *ngIf="registerForm.get('rePassword')?.getError('mismatch')"
+                class="m-0"
+              >
+                لا تطابق كلمة المرور
+              </p>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <input
+              #phone
+              formControlName="phone"
+              type="text"
+              class="form-control"
+              placeholder="رقم الهاتــــف"
+            />
+            <div
+              *ngIf="
+                registerForm.get('phone')?.errors &&
+                (registerForm.get('phone')?.touched || phone.value.length > 0)
+              "
+              class="alert alert-danger w-50 mx-auto text-center small mt-2"
+            >
+              <p
+                *ngIf="registerForm.get('phone')?.getError('required')"
+                class="m-0"
+              >
+                هذا الحقل اجباري
+              </p>
+              <p
+                *ngIf="registerForm.get('phone')?.getError('pattern')"
+                class="m-0"
+              >
+                يقبل فقط الارقام المصرية مثل (656*****010)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <button class="back ms-4" (click)="goToHome()">رجــــوع</button>
+        <button [disabled]="registerForm.invalid" class="registeration">
+          التسجيل
+          <span *ngIf="loading"
+            ><i class="fas fa-spin fa-spinner me-2"></i
+          ></span>
+        </button>
+
+        <div
+          *ngIf="errMessage"
+          class="alert alert-danger w-50 mx-auto text-center small mt-2"
+        >
+          <p class="m-0">{{ errMessage }}</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
